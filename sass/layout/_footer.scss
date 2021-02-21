@@ -1,0 +1,56 @@
+.footer{
+    color: $color-light;
+    background-color: #26272b;
+    padding: 5rem 3rem;
+    font-size: $default-font-size;
+
+    @include respond(tab-port) {
+        text-align: center;  
+    }
+
+    &__navigation,  
+    &-info{
+        padding-top: 7rem;
+        padding-left: 10rem;
+  
+        & a,
+        &  li{
+            text-transform: uppercase;
+            font-size: inherit;
+            display: block;
+            line-height: 2.3;
+            text-decoration: none;
+            color: inherit;
+
+            &:not(:last-child) {
+                margin-right: 1.5rem;
+            }  
+        }
+    } 
+    
+    &__navigation{
+        border-top: 1px solid $color-text;
+        padding-top: 3.5rem;
+        padding-left: 0;
+
+        & a,
+        & li{ 
+            display: inline-block;
+        }
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
+    }  
+ 
+    & p{
+        padding-bottom: 3.5rem; 
+    }
+
+    &-info{
+        @include respond(tab-port) {
+            padding-left: 0;
+            padding-top: 0;  
+        }
+    }
+}

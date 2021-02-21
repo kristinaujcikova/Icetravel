@@ -1,0 +1,32 @@
+.header {
+    background-image: linear-gradient(
+        to right top,
+        rgba(#051937, 0.8),
+        rgba(#004e7a, 0.8),
+        rgba(#008793, 0.8),
+        rgba(#00bf72, 0.8),
+        rgba(#a8eb12, 0.8)),
+        url(../img/header_img.jpg); 
+
+        @include photo;
+
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+
+    &__logo {
+        height: 5rem;
+    }
+
+    &__text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
+
+

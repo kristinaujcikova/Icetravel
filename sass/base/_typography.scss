@@ -1,0 +1,93 @@
+body{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: $color-text;
+    -webkit-font-smoothing: antialiased;
+}
+
+.heading-primary{ 
+    color: $color-white;
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+
+    &--main{
+        font-family: "Merriweather", serif;
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem; 
+        
+        @include respond(phone) {
+            letter-spacing: 1rem;
+            font-size: 5rem;
+        } 
+        
+        @media only screen and (max-width: 26.25em) {
+            letter-spacing: 0.7rem;
+            font-size: 4rem;
+        }
+    }
+
+    &--sub{     
+        display: block;
+        font-family: "Roboto", sans-serif;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.5rem;
+
+        @include respond(phone) {
+            letter-spacing: .5rem;
+        }
+
+        @media only screen and (max-width: 26.25em) {
+            letter-spacing: 0.3rem;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.heading-secondary { 
+    font-family: "Roboto", sans-serif;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    background-image: linear-gradient(to right, $color-primary, $color-secondary, $color-tertiary);
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: .2rem;
+
+    &:hover {
+        text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+    }
+
+    @include respond(tab-port) {
+        font-size: 3rem;
+    }    
+
+    @include respond(phone) {
+        font-size: 2.5rem;
+    }
+}
+
+.heading-tertiary{
+    font-size: $default-font-size;
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: italic;
+    text-transform: uppercase;
+    color: $color-text-2;
+}
+
+.paragraph{
+    font-size: $default-font-size;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+}
+

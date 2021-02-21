@@ -1,0 +1,50 @@
+.section-features{
+    background-image: url(../img/features_img.jpg);
+    @include photo;
+
+    @include respond(tab-port) {
+        clip-path: none;
+        padding-bottom: 5rem;
+    }
+     
+    &::before{
+        content: "";
+        background: rgba(7,10,12,0.5);
+        position: absolute;
+        top: 0;
+        min-height: 100%;
+        left: 0;
+        right: 0;
+        z-index: -1;
+    } 
+}
+
+.feature-box{
+    background: rgba(255, 255, 255, 0.1);
+    font-size: 1.5rem;
+    padding: 2.5rem;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    border: 1px solid #828282;
+    transition: 0.3s ease-out;
+    color: $color-white;
+
+    &__paragraph{
+        padding-top: 1rem;
+    }
+
+    &__icon{
+        font-size: 6rem;
+        margin-bottom: 2.7rem;
+        display: inline-block;
+        color: $color-primary;
+    }
+
+    &:hover{
+        background: $color-black;
+        transition: 0.3s ease-out;
+        opacity: 0.8;
+    }
+}
+
